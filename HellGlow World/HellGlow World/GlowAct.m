@@ -10,4 +10,8 @@
 
 @implementation GlowAct
 
+-(void) showInfo {
+    NSLog(@"The act is called %@ and wil start at %@. People gave it a rating of %ld.", self.name, self.startTime, self.rating);
+}
+
 @end

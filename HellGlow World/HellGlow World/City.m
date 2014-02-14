@@ -10,4 +10,8 @@
 
 @implementation City
 
+-(void) showInfo {
+    NSLog(@"In the city of %@ there are currently living %ld people.", self.name, self.population);
+}
+
 @end

@@ -10,4 +10,10 @@
 
 @interface City : NSObject
 
+@property NSString* name;
+@property NSInteger population;
+@property NSMutableArray* glowActs;
+
+-(void) showInfo;
+
 @end
