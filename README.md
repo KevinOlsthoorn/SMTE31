@@ -1,3 +1,3 @@
 SMTE31
 ======
-Git Repo for SMTE31 projects.
+Git Repo for SMTE31 assignments.
