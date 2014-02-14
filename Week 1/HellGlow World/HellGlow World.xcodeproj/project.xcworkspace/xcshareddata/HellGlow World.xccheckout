@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>1A441EE3-7D25-4C17-BA12-6C88D9F3FE1F</string>
+	<string>957CD033-DA47-46A5-A2FD-9AE407EE79A1</string>
 	<key>IDESourceControlProjectName</key>
 	<string>HellGlow World</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>https://github.com/KevinOlsthoorn/SMTE31.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>HellGlow World/HellGlow World.xcodeproj/project.xcworkspace</string>
+	<string>Week 1/HellGlow World/HellGlow World.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>29AA0728-CE73-4B87-A950-4F68C7DA530B</key>
-		<string>../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/KevinOlsthoorn/SMTE31.git</string>
