@@ -10,8 +10,6 @@
 		921878F218AE203B0091CCD6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 921878F118AE203B0091CCD6 /* Foundation.framework */; };
 		921878F918AE203B0091CCD6 /* HellGlow_World.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 921878F818AE203B0091CCD6 /* HellGlow_World.1 */; };
 		92948FC918AE21410030BDF8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 921878F418AE203B0091CCD6 /* main.m */; };
-		92990F9318AE29F600ECEE2C /* GlowAct.m in Sources */ = {isa = PBXBuildFile; fileRef = 92990F9218AE29F600ECEE2C /* GlowAct.m */; };
-		9299579118AE2D5F006017AE /* City.m in Sources */ = {isa = PBXBuildFile; fileRef = 9299579018AE2D5F006017AE /* City.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,10 +31,6 @@
 		921878F418AE203B0091CCD6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		921878F718AE203B0091CCD6 /* HellGlow World-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HellGlow World-Prefix.pch"; sourceTree = "<group>"; };
 		921878F818AE203B0091CCD6 /* HellGlow_World.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = HellGlow_World.1; sourceTree = "<group>"; };
-		92990F9118AE29F600ECEE2C /* GlowAct.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlowAct.h; sourceTree = "<group>"; };
-		92990F9218AE29F600ECEE2C /* GlowAct.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlowAct.m; sourceTree = "<group>"; };
-		9299578F18AE2D5F006017AE /* City.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = City.h; sourceTree = "<group>"; };
-		9299579018AE2D5F006017AE /* City.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = City.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,10 +73,6 @@
 		921878F318AE203B0091CCD6 /* HellGlow World */ = {
 			isa = PBXGroup;
 			children = (
-				9299578F18AE2D5F006017AE /* City.h */,
-				9299579018AE2D5F006017AE /* City.m */,
-				92990F9118AE29F600ECEE2C /* GlowAct.h */,
-				92990F9218AE29F600ECEE2C /* GlowAct.m */,
 				921878F418AE203B0091CCD6 /* main.m */,
 				921878F818AE203B0091CCD6 /* HellGlow_World.1 */,
 				921878F618AE203B0091CCD6 /* Supporting Files */,
@@ -149,8 +139,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				92948FC918AE21410030BDF8 /* main.m in Sources */,
-				92990F9318AE29F600ECEE2C /* GlowAct.m in Sources */,
-				9299579118AE2D5F006017AE /* City.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
