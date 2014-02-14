@@ -15,5 +15,6 @@
 @property NSMutableArray* glowActs;
 
 -(void) showInfo;
+-(id) init;
 
 @end
