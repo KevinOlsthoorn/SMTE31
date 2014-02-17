@@ -19,6 +19,7 @@
 		925240EA18B2937400FCFB07 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 925240D218B2937400FCFB07 /* UIKit.framework */; };
 		925240F218B2937400FCFB07 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 925240F018B2937400FCFB07 /* InfoPlist.strings */; };
 		925240F418B2937400FCFB07 /* HellGlow_WorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 925240F318B2937400FCFB07 /* HellGlow_WorldTests.m */; };
+		9297F16618B29B83006D7ABA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9297F16518B29B83006D7ABA /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		925240EF18B2937400FCFB07 /* HellGlow WorldTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "HellGlow WorldTests-Info.plist"; sourceTree = "<group>"; };
 		925240F118B2937400FCFB07 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		925240F318B2937400FCFB07 /* HellGlow_WorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HellGlow_WorldTests.m; sourceTree = "<group>"; };
+		9297F16518B29B83006D7ABA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 			children = (
 				925240DD18B2937400FCFB07 /* XYZAppDelegate.h */,
 				925240DE18B2937400FCFB07 /* XYZAppDelegate.m */,
+				9297F16518B29B83006D7ABA /* Main.storyboard */,
 				925240E018B2937400FCFB07 /* Images.xcassets */,
 				925240D518B2937400FCFB07 /* Supporting Files */,
 			);
@@ -220,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9297F16618B29B83006D7ABA /* Main.storyboard in Resources */,
 				925240D918B2937400FCFB07 /* InfoPlist.strings in Resources */,
 				925240E118B2937400FCFB07 /* Images.xcassets in Resources */,
 			);
