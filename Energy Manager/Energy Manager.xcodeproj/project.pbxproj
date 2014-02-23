@@ -28,6 +28,7 @@
 		921907B118BA5DD300A7EA98 /* harvesting.png in Resources */ = {isa = PBXBuildFile; fileRef = 921907AD18BA5DD300A7EA98 /* harvesting.png */; };
 		921907B218BA5DD300A7EA98 /* overview.png in Resources */ = {isa = PBXBuildFile; fileRef = 921907AE18BA5DD300A7EA98 /* overview.png */; };
 		921907B318BA5DD300A7EA98 /* profit.png in Resources */ = {isa = PBXBuildFile; fileRef = 921907AF18BA5DD300A7EA98 /* profit.png */; };
+		92FC852E18BA689600060C2D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 92FC852D18BA689600060C2D /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		921907AD18BA5DD300A7EA98 /* harvesting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = harvesting.png; sourceTree = "<group>"; };
 		921907AE18BA5DD300A7EA98 /* overview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overview.png; sourceTree = "<group>"; };
 		921907AF18BA5DD300A7EA98 /* profit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profit.png; sourceTree = "<group>"; };
+		92FC852D18BA689600060C2D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				9219078618BA58B800A7EA98 /* ViewController.h */,
 				9219078718BA58B800A7EA98 /* ViewController.m */,
 				9219078918BA58B800A7EA98 /* Images.xcassets */,
+				92FC852D18BA689600060C2D /* icon.png */,
 				9219077518BA58B800A7EA98 /* Supporting Files */,
 			);
 			path = "Energy Manager";
@@ -255,6 +258,7 @@
 				9219078A18BA58B800A7EA98 /* Images.xcassets in Resources */,
 				921907B118BA5DD300A7EA98 /* harvesting.png in Resources */,
 				9219078218BA58B800A7EA98 /* Main_iPhone.storyboard in Resources */,
+				92FC852E18BA689600060C2D /* icon.png in Resources */,
 				9219077918BA58B800A7EA98 /* InfoPlist.strings in Resources */,
 				921907B318BA5DD300A7EA98 /* profit.png in Resources */,
 				921907B218BA5DD300A7EA98 /* overview.png in Resources */,
