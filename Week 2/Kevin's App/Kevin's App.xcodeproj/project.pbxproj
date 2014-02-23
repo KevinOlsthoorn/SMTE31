@@ -21,6 +21,14 @@
 		923CA17118B62F0A00307BE1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 923CA15318B62F0A00307BE1 /* UIKit.framework */; };
 		923CA17918B62F0A00307BE1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 923CA17718B62F0A00307BE1 /* InfoPlist.strings */; };
 		923CA17B18B62F0A00307BE1 /* Kevin_s_AppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CA17A18B62F0A00307BE1 /* Kevin_s_AppTests.m */; };
+		923CA18718B63B4800307BE1 /* easter-egg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 923CA18618B63B4800307BE1 /* easter-egg.jpg */; };
+		923CA18B18B63B7000307BE1 /* apple-logo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 923CA18A18B63B7000307BE1 /* apple-logo.gif */; };
+		923CA18E18B63F4600307BE1 /* GeneralViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CA18D18B63F4600307BE1 /* GeneralViewController.m */; };
+		923CA19118B63F5A00307BE1 /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CA19018B63F5A00307BE1 /* AboutViewController.m */; };
+		923CA19418B63F6B00307BE1 /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CA19318B63F6B00307BE1 /* EasterEggViewController.m */; };
+		923CA19718B63F7F00307BE1 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CA19618B63F7F00307BE1 /* DetailsViewController.m */; };
+		923CA19A18B63F8E00307BE1 /* MoreDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 923CA19918B63F8E00307BE1 /* MoreDetailsViewController.m */; };
+		923CA19C18B657C100307BE1 /* profielfoto.png in Resources */ = {isa = PBXBuildFile; fileRef = 923CA19B18B657C100307BE1 /* profielfoto.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +61,19 @@
 		923CA17618B62F0A00307BE1 /* Kevin's AppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Kevin's AppTests-Info.plist"; sourceTree = "<group>"; };
 		923CA17818B62F0A00307BE1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		923CA17A18B62F0A00307BE1 /* Kevin_s_AppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Kevin_s_AppTests.m; sourceTree = "<group>"; };
+		923CA18618B63B4800307BE1 /* easter-egg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "easter-egg.jpg"; sourceTree = "<group>"; };
+		923CA18A18B63B7000307BE1 /* apple-logo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "apple-logo.gif"; sourceTree = "<group>"; };
+		923CA18C18B63F4600307BE1 /* GeneralViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneralViewController.h; sourceTree = "<group>"; };
+		923CA18D18B63F4600307BE1 /* GeneralViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneralViewController.m; sourceTree = "<group>"; };
+		923CA18F18B63F5A00307BE1 /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutViewController.h; sourceTree = "<group>"; };
+		923CA19018B63F5A00307BE1 /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutViewController.m; sourceTree = "<group>"; };
+		923CA19218B63F6B00307BE1 /* EasterEggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasterEggViewController.h; sourceTree = "<group>"; };
+		923CA19318B63F6B00307BE1 /* EasterEggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasterEggViewController.m; sourceTree = "<group>"; };
+		923CA19518B63F7F00307BE1 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		923CA19618B63F7F00307BE1 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		923CA19818B63F8E00307BE1 /* MoreDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreDetailsViewController.h; sourceTree = "<group>"; };
+		923CA19918B63F8E00307BE1 /* MoreDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreDetailsViewController.m; sourceTree = "<group>"; };
+		923CA19B18B657C100307BE1 /* profielfoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profielfoto.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,9 +133,22 @@
 		923CA15518B62F0A00307BE1 /* Kevin's App */ = {
 			isa = PBXGroup;
 			children = (
+				923CA18A18B63B7000307BE1 /* apple-logo.gif */,
 				923CA15E18B62F0A00307BE1 /* AppDelegate.h */,
 				923CA15F18B62F0A00307BE1 /* AppDelegate.m */,
 				923CA16118B62F0A00307BE1 /* Main.storyboard */,
+				923CA19B18B657C100307BE1 /* profielfoto.png */,
+				923CA18C18B63F4600307BE1 /* GeneralViewController.h */,
+				923CA18D18B63F4600307BE1 /* GeneralViewController.m */,
+				923CA18F18B63F5A00307BE1 /* AboutViewController.h */,
+				923CA19018B63F5A00307BE1 /* AboutViewController.m */,
+				923CA19218B63F6B00307BE1 /* EasterEggViewController.h */,
+				923CA19318B63F6B00307BE1 /* EasterEggViewController.m */,
+				923CA19518B63F7F00307BE1 /* DetailsViewController.h */,
+				923CA19618B63F7F00307BE1 /* DetailsViewController.m */,
+				923CA19818B63F8E00307BE1 /* MoreDetailsViewController.h */,
+				923CA19918B63F8E00307BE1 /* MoreDetailsViewController.m */,
+				923CA18618B63B4800307BE1 /* easter-egg.jpg */,
 				923CA16418B62F0A00307BE1 /* ViewController.h */,
 				923CA16518B62F0A00307BE1 /* ViewController.m */,
 				923CA16718B62F0A00307BE1 /* Images.xcassets */,
@@ -228,6 +262,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923CA19C18B657C100307BE1 /* profielfoto.png in Resources */,
+				923CA18B18B63B7000307BE1 /* apple-logo.gif in Resources */,
+				923CA18718B63B4800307BE1 /* easter-egg.jpg in Resources */,
 				923CA16818B62F0A00307BE1 /* Images.xcassets in Resources */,
 				923CA15A18B62F0A00307BE1 /* InfoPlist.strings in Resources */,
 				923CA16318B62F0A00307BE1 /* Main.storyboard in Resources */,
@@ -250,8 +287,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				923CA16618B62F0A00307BE1 /* ViewController.m in Sources */,
+				923CA19118B63F5A00307BE1 /* AboutViewController.m in Sources */,
+				923CA19418B63F6B00307BE1 /* EasterEggViewController.m in Sources */,
 				923CA16018B62F0A00307BE1 /* AppDelegate.m in Sources */,
+				923CA19718B63F7F00307BE1 /* DetailsViewController.m in Sources */,
 				923CA15C18B62F0A00307BE1 /* main.m in Sources */,
+				923CA19A18B63F8E00307BE1 /* MoreDetailsViewController.m in Sources */,
+				923CA18E18B63F4600307BE1 /* GeneralViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,6 +502,7 @@
 				923CA18018B62F0A00307BE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		923CA18118B62F0A00307BE1 /* Build configuration list for PBXNativeTarget "Kevin's AppTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +511,7 @@
 				923CA18318B62F0A00307BE1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
