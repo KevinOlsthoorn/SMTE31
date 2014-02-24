@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9203C4C218BB97B900ECECFA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203C4C118BB97B900ECECFA /* MainViewController.m */; };
+		9203C4C518BB97E400ECECFA /* ConsumptionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203C4C418BB97E400ECECFA /* ConsumptionViewController.m */; };
+		9203C4C818BB982F00ECECFA /* HarvestingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203C4C718BB982F00ECECFA /* HarvestingViewController.m */; };
+		9203C4CB18BB98A500ECECFA /* GasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203C4CA18BB98A500ECECFA /* GasViewController.m */; };
+		9203C4CE18BB98C700ECECFA /* ProfitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203C4CD18BB98C700ECECFA /* ProfitViewController.m */; };
+		9203C4D118BB98E700ECECFA /* OverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9203C4D018BB98E700ECECFA /* OverviewViewController.m */; };
 		9219076F18BA58B800A7EA98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9219076E18BA58B800A7EA98 /* Foundation.framework */; };
 		9219077118BA58B800A7EA98 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9219077018BA58B800A7EA98 /* CoreGraphics.framework */; };
 		9219077318BA58B800A7EA98 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9219077218BA58B800A7EA98 /* UIKit.framework */; };
@@ -42,6 +48,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9203C4C018BB97B900ECECFA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		9203C4C118BB97B900ECECFA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		9203C4C318BB97E400ECECFA /* ConsumptionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsumptionViewController.h; sourceTree = "<group>"; };
+		9203C4C418BB97E400ECECFA /* ConsumptionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsumptionViewController.m; sourceTree = "<group>"; };
+		9203C4C618BB982F00ECECFA /* HarvestingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HarvestingViewController.h; sourceTree = "<group>"; };
+		9203C4C718BB982F00ECECFA /* HarvestingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HarvestingViewController.m; sourceTree = "<group>"; };
+		9203C4C918BB98A500ECECFA /* GasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GasViewController.h; sourceTree = "<group>"; };
+		9203C4CA18BB98A500ECECFA /* GasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GasViewController.m; sourceTree = "<group>"; };
+		9203C4CC18BB98C700ECECFA /* ProfitViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfitViewController.h; sourceTree = "<group>"; };
+		9203C4CD18BB98C700ECECFA /* ProfitViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfitViewController.m; sourceTree = "<group>"; };
+		9203C4CF18BB98E700ECECFA /* OverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewViewController.h; sourceTree = "<group>"; };
+		9203C4D018BB98E700ECECFA /* OverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewViewController.m; sourceTree = "<group>"; };
 		9219076B18BA58B800A7EA98 /* Energy Manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Energy Manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9219076E18BA58B800A7EA98 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9219077018BA58B800A7EA98 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -131,6 +149,18 @@
 				9219077D18BA58B800A7EA98 /* AppDelegate.h */,
 				9219077E18BA58B800A7EA98 /* AppDelegate.m */,
 				9219078018BA58B800A7EA98 /* Main_iPhone.storyboard */,
+				9203C4CF18BB98E700ECECFA /* OverviewViewController.h */,
+				9203C4D018BB98E700ECECFA /* OverviewViewController.m */,
+				9203C4CC18BB98C700ECECFA /* ProfitViewController.h */,
+				9203C4CD18BB98C700ECECFA /* ProfitViewController.m */,
+				9203C4C918BB98A500ECECFA /* GasViewController.h */,
+				9203C4CA18BB98A500ECECFA /* GasViewController.m */,
+				9203C4C618BB982F00ECECFA /* HarvestingViewController.h */,
+				9203C4C718BB982F00ECECFA /* HarvestingViewController.m */,
+				9203C4C318BB97E400ECECFA /* ConsumptionViewController.h */,
+				9203C4C418BB97E400ECECFA /* ConsumptionViewController.m */,
+				9203C4C018BB97B900ECECFA /* MainViewController.h */,
+				9203C4C118BB97B900ECECFA /* MainViewController.m */,
 				921907AC18BA5DD300A7EA98 /* consumption.png */,
 				921907AD18BA5DD300A7EA98 /* harvesting.png */,
 				921907AE18BA5DD300A7EA98 /* overview.png */,
@@ -282,8 +312,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				9219078818BA58B800A7EA98 /* ViewController.m in Sources */,
+				9203C4CB18BB98A500ECECFA /* GasViewController.m in Sources */,
+				9203C4C518BB97E400ECECFA /* ConsumptionViewController.m in Sources */,
 				9219077F18BA58B800A7EA98 /* AppDelegate.m in Sources */,
+				9203C4CE18BB98C700ECECFA /* ProfitViewController.m in Sources */,
 				9219077B18BA58B800A7EA98 /* main.m in Sources */,
+				9203C4C218BB97B900ECECFA /* MainViewController.m in Sources */,
+				9203C4D118BB98E700ECECFA /* OverviewViewController.m in Sources */,
+				9203C4C818BB982F00ECECFA /* HarvestingViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

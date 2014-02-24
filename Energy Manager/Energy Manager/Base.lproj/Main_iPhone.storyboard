@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="MainViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nEq-uh-8mf"/>
                         <viewControllerLayoutGuide type="bottom" id="8JZ-HT-LzV"/>
@@ -117,10 +117,10 @@
             </objects>
             <point key="canvasLocation" x="791" y="8"/>
         </scene>
-        <!--View Controller - Overview-->
+        <!--Overview View Controller - Overview-->
         <scene sceneID="RhV-ik-2rp">
             <objects>
-                <viewController title="Overview" id="BHc-op-FDK" sceneMemberID="viewController">
+                <viewController title="Overview" id="BHc-op-FDK" customClass="OverviewViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gZr-c1-vRW"/>
                         <viewControllerLayoutGuide type="bottom" id="Mxv-bt-kwi"/>
@@ -136,10 +136,10 @@
             </objects>
             <point key="canvasLocation" x="1568" y="137"/>
         </scene>
-        <!--View Controller - Harvesting-->
+        <!--Harvesting View Controller - Harvesting-->
         <scene sceneID="8oo-iz-fss">
             <objects>
-                <viewController title="Harvesting" id="lCU-69-see" sceneMemberID="viewController">
+                <viewController title="Harvesting" id="lCU-69-see" customClass="HarvestingViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="PGT-fD-ehh"/>
                         <viewControllerLayoutGuide type="bottom" id="arD-Uy-XvS"/>
@@ -155,10 +155,10 @@
             </objects>
             <point key="canvasLocation" x="1941" y="-552"/>
         </scene>
-        <!--View Controller - Profit-->
+        <!--Profit View Controller - Profit-->
         <scene sceneID="SoI-y6-9rI">
             <objects>
-                <viewController title="Profit" id="ZCN-ce-I2z" sceneMemberID="viewController">
+                <viewController title="Profit" id="ZCN-ce-I2z" customClass="ProfitViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FMN-TB-RuT"/>
                         <viewControllerLayoutGuide type="bottom" id="un9-0i-6a9"/>
@@ -174,10 +174,10 @@
             </objects>
             <point key="canvasLocation" x="1315" y="1059"/>
         </scene>
-        <!--View Controller - Gas-->
+        <!--Gas View Controller - Gas-->
         <scene sceneID="aef-e9-Aa1">
             <objects>
-                <viewController title="Gas" id="jKI-gI-7ek" sceneMemberID="viewController">
+                <viewController title="Gas" id="jKI-gI-7ek" customClass="GasViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VYy-VL-W8H"/>
                         <viewControllerLayoutGuide type="bottom" id="2CA-xe-zdt"/>
@@ -193,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="1941" y="971"/>
         </scene>
-        <!--View Controller - Consumption-->
+        <!--Consumption View Controller - Consumption-->
         <scene sceneID="xm1-Qv-7Yz">
             <objects>
-                <viewController title="Consumption" id="Iig-yU-IZk" sceneMemberID="viewController">
+                <viewController title="Consumption" id="Iig-yU-IZk" customClass="ConsumptionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JKJ-6I-q8F"/>
                         <viewControllerLayoutGuide type="bottom" id="WUf-Bp-EoK"/>
