@@ -20,7 +20,6 @@
 		9219077B18BA58B800A7EA98 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9219077A18BA58B800A7EA98 /* main.m */; };
 		9219077F18BA58B800A7EA98 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9219077E18BA58B800A7EA98 /* AppDelegate.m */; };
 		9219078218BA58B800A7EA98 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9219078018BA58B800A7EA98 /* Main_iPhone.storyboard */; };
-		9219078518BA58B800A7EA98 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9219078318BA58B800A7EA98 /* Main_iPad.storyboard */; };
 		9219078818BA58B800A7EA98 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9219078718BA58B800A7EA98 /* ViewController.m */; };
 		9219078A18BA58B800A7EA98 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9219078918BA58B800A7EA98 /* Images.xcassets */; };
 		9219079118BA58B800A7EA98 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9219079018BA58B800A7EA98 /* XCTest.framework */; };
@@ -34,7 +33,17 @@
 		921907B118BA5DD300A7EA98 /* harvesting.png in Resources */ = {isa = PBXBuildFile; fileRef = 921907AD18BA5DD300A7EA98 /* harvesting.png */; };
 		921907B218BA5DD300A7EA98 /* overview.png in Resources */ = {isa = PBXBuildFile; fileRef = 921907AE18BA5DD300A7EA98 /* overview.png */; };
 		921907B318BA5DD300A7EA98 /* profit.png in Resources */ = {isa = PBXBuildFile; fileRef = 921907AF18BA5DD300A7EA98 /* profit.png */; };
-		92FC852E18BA689600060C2D /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 92FC852D18BA689600060C2D /* icon.png */; };
+		92DB6E9418BF71AB0035DE26 /* icon-60x60.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6E8E18BF71AB0035DE26 /* icon-60x60.png */; };
+		92DB6E9518BF71AB0035DE26 /* icon-76x76.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6E8F18BF71AB0035DE26 /* icon-76x76.png */; };
+		92DB6E9618BF71AB0035DE26 /* icon-120x120.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6E9018BF71AB0035DE26 /* icon-120x120.png */; };
+		92DB6E9718BF71AB0035DE26 /* icon-152x152.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6E9118BF71AB0035DE26 /* icon-152x152.png */; };
+		92DB6E9818BF71AB0035DE26 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6E9218BF71AB0035DE26 /* iTunesArtwork.png */; };
+		92DB6E9918BF71AB0035DE26 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6E9318BF71AB0035DE26 /* iTunesArtwork@2x.png */; };
+		92DB6E9E18BF73E30035DE26 /* icon-29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6E9A18BF73E30035DE26 /* icon-29x29.png */; };
+		92DB6E9F18BF73E30035DE26 /* icon-40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6E9B18BF73E30035DE26 /* icon-40x40.png */; };
+		92DB6EA018BF73E30035DE26 /* icon-58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6E9C18BF73E30035DE26 /* icon-58x58.png */; };
+		92DB6EA118BF73E30035DE26 /* icon-80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6E9D18BF73E30035DE26 /* icon-80x80.png */; };
+		92DB6EA718BF7D240035DE26 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6EA518BF7D240035DE26 /* Main_iPad.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,7 +80,6 @@
 		9219077D18BA58B800A7EA98 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		9219077E18BA58B800A7EA98 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		9219078118BA58B800A7EA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		9219078418BA58B800A7EA98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		9219078618BA58B800A7EA98 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		9219078718BA58B800A7EA98 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		9219078918BA58B800A7EA98 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -86,7 +94,17 @@
 		921907AD18BA5DD300A7EA98 /* harvesting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = harvesting.png; sourceTree = "<group>"; };
 		921907AE18BA5DD300A7EA98 /* overview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overview.png; sourceTree = "<group>"; };
 		921907AF18BA5DD300A7EA98 /* profit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profit.png; sourceTree = "<group>"; };
-		92FC852D18BA689600060C2D /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		92DB6E8E18BF71AB0035DE26 /* icon-60x60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-60x60.png"; path = "../icon-60x60.png"; sourceTree = "<group>"; };
+		92DB6E8F18BF71AB0035DE26 /* icon-76x76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-76x76.png"; path = "../icon-76x76.png"; sourceTree = "<group>"; };
+		92DB6E9018BF71AB0035DE26 /* icon-120x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-120x120.png"; path = "../icon-120x120.png"; sourceTree = "<group>"; };
+		92DB6E9118BF71AB0035DE26 /* icon-152x152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon-152x152.png"; path = "../icon-152x152.png"; sourceTree = "<group>"; };
+		92DB6E9218BF71AB0035DE26 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = ../iTunesArtwork.png; sourceTree = "<group>"; };
+		92DB6E9318BF71AB0035DE26 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "../iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		92DB6E9A18BF73E30035DE26 /* icon-29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-29x29.png"; sourceTree = "<group>"; };
+		92DB6E9B18BF73E30035DE26 /* icon-40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-40x40.png"; sourceTree = "<group>"; };
+		92DB6E9C18BF73E30035DE26 /* icon-58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-58x58.png"; sourceTree = "<group>"; };
+		92DB6E9D18BF73E30035DE26 /* icon-80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-80x80.png"; sourceTree = "<group>"; };
+		92DB6EA618BF7D240035DE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,9 +164,16 @@
 		9219077418BA58B800A7EA98 /* Energy Manager */ = {
 			isa = PBXGroup;
 			children = (
+				92DB6E8E18BF71AB0035DE26 /* icon-60x60.png */,
+				92DB6E8F18BF71AB0035DE26 /* icon-76x76.png */,
+				92DB6E9018BF71AB0035DE26 /* icon-120x120.png */,
+				92DB6E9118BF71AB0035DE26 /* icon-152x152.png */,
+				92DB6E9218BF71AB0035DE26 /* iTunesArtwork.png */,
+				92DB6E9318BF71AB0035DE26 /* iTunesArtwork@2x.png */,
 				9219077D18BA58B800A7EA98 /* AppDelegate.h */,
 				9219077E18BA58B800A7EA98 /* AppDelegate.m */,
 				9219078018BA58B800A7EA98 /* Main_iPhone.storyboard */,
+				92DB6EA518BF7D240035DE26 /* Main_iPad.storyboard */,
 				9203C4CF18BB98E700ECECFA /* OverviewViewController.h */,
 				9203C4D018BB98E700ECECFA /* OverviewViewController.m */,
 				9203C4CC18BB98C700ECECFA /* ProfitViewController.h */,
@@ -167,11 +192,13 @@
 				921907AF18BA5DD300A7EA98 /* profit.png */,
 				921907A818BA5B6600A7EA98 /* button_container.png */,
 				921907AA18BA5BFE00A7EA98 /* logo.png */,
-				9219078318BA58B800A7EA98 /* Main_iPad.storyboard */,
 				9219078618BA58B800A7EA98 /* ViewController.h */,
 				9219078718BA58B800A7EA98 /* ViewController.m */,
 				9219078918BA58B800A7EA98 /* Images.xcassets */,
-				92FC852D18BA689600060C2D /* icon.png */,
+				92DB6E9A18BF73E30035DE26 /* icon-29x29.png */,
+				92DB6E9B18BF73E30035DE26 /* icon-40x40.png */,
+				92DB6E9C18BF73E30035DE26 /* icon-58x58.png */,
+				92DB6E9D18BF73E30035DE26 /* icon-80x80.png */,
 				9219077518BA58B800A7EA98 /* Supporting Files */,
 			);
 			path = "Energy Manager";
@@ -283,15 +310,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				921907B018BA5DD300A7EA98 /* consumption.png in Resources */,
-				9219078518BA58B800A7EA98 /* Main_iPad.storyboard in Resources */,
+				92DB6EA018BF73E30035DE26 /* icon-58x58.png in Resources */,
+				92DB6E9918BF71AB0035DE26 /* iTunesArtwork@2x.png in Resources */,
+				92DB6E9718BF71AB0035DE26 /* icon-152x152.png in Resources */,
 				921907A918BA5B6600A7EA98 /* button_container.png in Resources */,
+				92DB6EA718BF7D240035DE26 /* Main_iPad.storyboard in Resources */,
 				9219078A18BA58B800A7EA98 /* Images.xcassets in Resources */,
+				92DB6EA118BF73E30035DE26 /* icon-80x80.png in Resources */,
+				92DB6E9818BF71AB0035DE26 /* iTunesArtwork.png in Resources */,
+				92DB6E9618BF71AB0035DE26 /* icon-120x120.png in Resources */,
 				921907B118BA5DD300A7EA98 /* harvesting.png in Resources */,
+				92DB6E9518BF71AB0035DE26 /* icon-76x76.png in Resources */,
 				9219078218BA58B800A7EA98 /* Main_iPhone.storyboard in Resources */,
-				92FC852E18BA689600060C2D /* icon.png in Resources */,
 				9219077918BA58B800A7EA98 /* InfoPlist.strings in Resources */,
 				921907B318BA5DD300A7EA98 /* profit.png in Resources */,
+				92DB6E9418BF71AB0035DE26 /* icon-60x60.png in Resources */,
 				921907B218BA5DD300A7EA98 /* overview.png in Resources */,
+				92DB6E9F18BF73E30035DE26 /* icon-40x40.png in Resources */,
+				92DB6E9E18BF73E30035DE26 /* icon-29x29.png in Resources */,
 				921907AB18BA5BFE00A7EA98 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,20 +394,20 @@
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		9219078318BA58B800A7EA98 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9219078418BA58B800A7EA98 /* Base */,
-			);
-			name = Main_iPad.storyboard;
-			sourceTree = "<group>";
-		};
 		9219079918BA58B800A7EA98 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9219079A18BA58B800A7EA98 /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		92DB6EA518BF7D240035DE26 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				92DB6EA618BF7D240035DE26 /* Base */,
+			);
+			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -459,8 +495,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Energy Manager/Energy Manager-Prefix.pch";
 				INFOPLIST_FILE = "Energy Manager/Energy Manager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -473,8 +510,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Energy Manager/Energy Manager-Prefix.pch";
 				INFOPLIST_FILE = "Energy Manager/Energy Manager-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = 2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
