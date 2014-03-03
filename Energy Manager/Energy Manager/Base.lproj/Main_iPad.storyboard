@@ -17,19 +17,19 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="vV4-1t-t8B">
-                                <rect key="frame" x="50" y="64" width="669" height="552"/>
+                                <rect key="frame" x="50" y="64" width="669" height="298"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="button_container.png" translatesAutoresizingMaskIntoConstraints="NO" id="rbI-wQ-sP3">
-                                <rect key="frame" x="0.0" y="168" width="768" height="776"/>
+                                <rect key="frame" x="0.0" y="403" width="768" height="553"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rl7-Hn-D1d">
-                                <rect key="frame" x="20" y="188" width="122" height="72"/>
+                                <rect key="frame" x="50" y="458" width="320" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="titleEdgeInsets" minX="-46" minY="48" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="31" minY="-20" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="110" minY="-20" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Consumption" image="consumption.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,11 +39,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqg-bW-JJ9">
-                                <rect key="frame" x="178" y="188" width="122" height="72"/>
+                                <rect key="frame" x="405" y="458" width="314" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="titleEdgeInsets" minX="-46" minY="48" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="31" minY="-20" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="90" minY="-20" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Harvesting" image="harvesting.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,7 +53,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fo-ea-Sv0">
-                                <rect key="frame" x="20" y="268" width="122" height="72"/>
+                                <rect key="frame" x="50" y="586" width="320" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="titleEdgeInsets" minX="-52" minY="48" maxX="0.0" maxY="0.0"/>
@@ -67,7 +67,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oyd-is-TMt">
-                                <rect key="frame" x="178" y="268" width="122" height="72"/>
+                                <rect key="frame" x="405" y="586" width="314" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="titleEdgeInsets" minX="-53" minY="48" maxX="0.0" maxY="0.0"/>
@@ -81,11 +81,11 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cqP-2n-Kly">
-                                <rect key="frame" x="99" y="348" width="122" height="72"/>
+                                <rect key="frame" x="224" y="714" width="320" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="titleEdgeInsets" minX="-46" minY="48" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="29" minY="-20" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="80" minY="-20" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Overview" image="overview.png">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,17 +94,17 @@
                                     <segue destination="BHc-op-FDK" kind="push" id="iWw-z4-zv6"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are 18m away from the solar panels!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQy-Vp-6NM">
-                                <rect key="frame" x="20" y="447" width="285" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You are ???m away from the solar panels!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yQy-Vp-6NM">
+                                <rect key="frame" x="158" y="881" width="452" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Last ran app on: 23-02-13 18:12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7f-t8-4yw">
-                                <rect key="frame" x="20" y="527" width="285" height="21"/>
+                                <rect key="frame" x="242" y="975" width="285" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>

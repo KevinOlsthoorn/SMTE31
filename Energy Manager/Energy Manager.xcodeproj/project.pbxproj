@@ -44,6 +44,10 @@
 		92DB6EA018BF73E30035DE26 /* icon-58x58.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6E9C18BF73E30035DE26 /* icon-58x58.png */; };
 		92DB6EA118BF73E30035DE26 /* icon-80x80.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6E9D18BF73E30035DE26 /* icon-80x80.png */; };
 		92DB6EA718BF7D240035DE26 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6EA518BF7D240035DE26 /* Main_iPad.storyboard */; };
+		92DB6ECB18BF8E5E0035DE26 /* launch-image-ipad-landscape-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6EC718BF8E5E0035DE26 /* launch-image-ipad-landscape-retina.png */; };
+		92DB6ECC18BF8E5E0035DE26 /* launch-image-ipad-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6EC818BF8E5E0035DE26 /* launch-image-ipad-landscape.png */; };
+		92DB6ECD18BF8E5E0035DE26 /* launch-image-ipad-portraid-retina.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6EC918BF8E5E0035DE26 /* launch-image-ipad-portraid-retina.png */; };
+		92DB6ECE18BF8E5E0035DE26 /* launch-image-ipad-portraid.png in Resources */ = {isa = PBXBuildFile; fileRef = 92DB6ECA18BF8E5E0035DE26 /* launch-image-ipad-portraid.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +109,10 @@
 		92DB6E9C18BF73E30035DE26 /* icon-58x58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-58x58.png"; sourceTree = "<group>"; };
 		92DB6E9D18BF73E30035DE26 /* icon-80x80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-80x80.png"; sourceTree = "<group>"; };
 		92DB6EA618BF7D240035DE26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		92DB6EC718BF8E5E0035DE26 /* launch-image-ipad-landscape-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-image-ipad-landscape-retina.png"; sourceTree = "<group>"; };
+		92DB6EC818BF8E5E0035DE26 /* launch-image-ipad-landscape.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-image-ipad-landscape.png"; sourceTree = "<group>"; };
+		92DB6EC918BF8E5E0035DE26 /* launch-image-ipad-portraid-retina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-image-ipad-portraid-retina.png"; sourceTree = "<group>"; };
+		92DB6ECA18BF8E5E0035DE26 /* launch-image-ipad-portraid.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launch-image-ipad-portraid.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +172,10 @@
 		9219077418BA58B800A7EA98 /* Energy Manager */ = {
 			isa = PBXGroup;
 			children = (
+				92DB6EC718BF8E5E0035DE26 /* launch-image-ipad-landscape-retina.png */,
+				92DB6EC818BF8E5E0035DE26 /* launch-image-ipad-landscape.png */,
+				92DB6EC918BF8E5E0035DE26 /* launch-image-ipad-portraid-retina.png */,
+				92DB6ECA18BF8E5E0035DE26 /* launch-image-ipad-portraid.png */,
 				92DB6E8E18BF71AB0035DE26 /* icon-60x60.png */,
 				92DB6E8F18BF71AB0035DE26 /* icon-76x76.png */,
 				92DB6E9018BF71AB0035DE26 /* icon-120x120.png */,
@@ -310,12 +322,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				921907B018BA5DD300A7EA98 /* consumption.png in Resources */,
+				92DB6ECD18BF8E5E0035DE26 /* launch-image-ipad-portraid-retina.png in Resources */,
 				92DB6EA018BF73E30035DE26 /* icon-58x58.png in Resources */,
 				92DB6E9918BF71AB0035DE26 /* iTunesArtwork@2x.png in Resources */,
 				92DB6E9718BF71AB0035DE26 /* icon-152x152.png in Resources */,
 				921907A918BA5B6600A7EA98 /* button_container.png in Resources */,
 				92DB6EA718BF7D240035DE26 /* Main_iPad.storyboard in Resources */,
 				9219078A18BA58B800A7EA98 /* Images.xcassets in Resources */,
+				92DB6ECC18BF8E5E0035DE26 /* launch-image-ipad-landscape.png in Resources */,
 				92DB6EA118BF73E30035DE26 /* icon-80x80.png in Resources */,
 				92DB6E9818BF71AB0035DE26 /* iTunesArtwork.png in Resources */,
 				92DB6E9618BF71AB0035DE26 /* icon-120x120.png in Resources */,
@@ -327,7 +341,9 @@
 				92DB6E9418BF71AB0035DE26 /* icon-60x60.png in Resources */,
 				921907B218BA5DD300A7EA98 /* overview.png in Resources */,
 				92DB6E9F18BF73E30035DE26 /* icon-40x40.png in Resources */,
+				92DB6ECB18BF8E5E0035DE26 /* launch-image-ipad-landscape-retina.png in Resources */,
 				92DB6E9E18BF73E30035DE26 /* icon-29x29.png in Resources */,
+				92DB6ECE18BF8E5E0035DE26 /* launch-image-ipad-portraid.png in Resources */,
 				921907AB18BA5BFE00A7EA98 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
