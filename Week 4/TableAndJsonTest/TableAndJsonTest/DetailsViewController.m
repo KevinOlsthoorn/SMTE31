@@ -9,10 +9,24 @@
 #import "DetailsViewController.h"
 
 @interface DetailsViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *pirateName;
+@property (weak, nonatomic) IBOutlet UILabel *pirateLife;
+@property (weak, nonatomic) IBOutlet UILabel *pirateActiveYears;
+@property (weak, nonatomic) IBOutlet UILabel *pirateCountryOfBirth;
+@property (weak, nonatomic) IBOutlet UITextView *pirateComments;
 
 @end
 
 @implementation DetailsViewController
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    self.pirateName.text = self.selectedPirate.name;
+    self.pirateLife.text = self.selectedPirate.life;
+    self.pirateActiveYears.text = self.selectedPirate.yearsActive;
+    self.pirateCountryOfBirth.text = self.selectedPirate.countryOfOrigin;
+    self.pirateComments.text = self.selectedPirate.comments;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

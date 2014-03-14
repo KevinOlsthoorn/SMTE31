@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
     
-    pirates = [[NSMutableArray alloc] init];
+    self.pirates = [[NSMutableArray alloc] init];
     [self loadJsonData];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -58,7 +58,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return pirates.count;
+    return self.pirates.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,7 +70,7 @@
     //Set the correct name in the cell.
     //Do so by looking up the row in indexpath and choosing the same element in the array
     NSInteger currentRow = indexPath.row;
-    Pirate *currentPirate = [pirates objectAtIndex:currentRow];
+    Pirate *currentPirate = [self.pirates objectAtIndex:currentRow];
     
     NSString *textForCell = currentPirate.name;
     
@@ -78,6 +78,16 @@
     cell.textLabel.text = textForCell;
     
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    //Find the selected pirate
+    NSIndexPath *selectedRow = [self.tableView indexPathForSelectedRow];
+    Pirate *selectedPirate = [self.pirates objectAtIndex:selectedRow.row];
+    //Pass the selected pirate to the next viewcontroller
+    DetailsViewController *controller = segue.destinationViewController;
+    controller.selectedPirate = selectedPirate;
 }
 
 -(void)loadJsonData
@@ -121,7 +131,7 @@
         pirate.comments = [dict objectForKey:@"comments"];
         
         //Add the pirates to the array
-        [pirates addObject:pirate];
+        [self.pirates addObject:pirate];
     }
     [self.tableView reloadData];
 }

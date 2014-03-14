@@ -10,6 +10,6 @@
 
 @interface TableViewController : UITableViewController
 
-@end
+@property NSMutableArray *pirates;
 
-NSMutableArray *pirates;
+@end

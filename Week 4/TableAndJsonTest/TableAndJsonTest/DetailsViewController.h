@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Pirate.h"
 
 @interface DetailsViewController : UIViewController
+
+@property Pirate *selectedPirate;
 
 @end
