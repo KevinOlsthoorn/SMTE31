@@ -21,7 +21,6 @@
 		9225DB1918D1B14000DF9CB1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9225DAF818D1B14000DF9CB1 /* UIKit.framework */; };
 		9225DB2118D1B14000DF9CB1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9225DB1F18D1B14000DF9CB1 /* InfoPlist.strings */; };
 		9225DB2318D1B14000DF9CB1 /* TableAndJsonTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9225DB2218D1B14000DF9CB1 /* TableAndJsonTestTests.m */; };
-		92E747DB18D31BAB0040474F /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E747DA18D31BAB0040474F /* TableViewController.m */; };
 		92E747DE18D31BE00040474F /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E747DD18D31BE00040474F /* DetailsViewController.m */; };
 		92E747E118D31C2A0040474F /* Pirate.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E747E018D31C2A0040474F /* Pirate.m */; };
 		92E7480118D32ED40040474F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92E7480018D32ED40040474F /* Security.framework */; };
@@ -34,6 +33,7 @@
 		92E7481C18D33C0D0040474F /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7481118D33C0D0040474F /* AFURLConnectionOperation.m */; };
 		92E7481D18D33C0D0040474F /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7481318D33C0D0040474F /* AFXMLRequestOperation.m */; };
 		92E7481E18D33C0D0040474F /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7481518D33C0D0040474F /* UIImageView+AFNetworking.m */; };
+		92E7482118D3476C0040474F /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 92E7482018D3476C0040474F /* TableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,8 +65,6 @@
 		9225DB1E18D1B14000DF9CB1 /* TableAndJsonTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TableAndJsonTestTests-Info.plist"; sourceTree = "<group>"; };
 		9225DB2018D1B14000DF9CB1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9225DB2218D1B14000DF9CB1 /* TableAndJsonTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableAndJsonTestTests.m; sourceTree = "<group>"; };
-		92E747D918D31BAB0040474F /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TableViewController.h; path = ../TableViewController.h; sourceTree = "<group>"; };
-		92E747DA18D31BAB0040474F /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TableViewController.m; path = ../TableViewController.m; sourceTree = "<group>"; };
 		92E747DC18D31BE00040474F /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
 		92E747DD18D31BE00040474F /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
 		92E747DF18D31C2A0040474F /* Pirate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pirate.h; sourceTree = "<group>"; };
@@ -91,6 +89,8 @@
 		92E7481318D33C0D0040474F /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		92E7481418D33C0D0040474F /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		92E7481518D33C0D0040474F /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		92E7481F18D3476C0040474F /* TableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		92E7482018D3476C0040474F /* TableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,8 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				92E7480218D33C0D0040474F /* AFNetworking */,
-				92E747D918D31BAB0040474F /* TableViewController.h */,
-				92E747DA18D31BAB0040474F /* TableViewController.m */,
+				92E7481F18D3476C0040474F /* TableViewController.h */,
+				92E7482018D3476C0040474F /* TableViewController.m */,
 				9225DB0318D1B14000DF9CB1 /* AppDelegate.h */,
 				9225DB0418D1B14000DF9CB1 /* AppDelegate.m */,
 				9225DB0618D1B14000DF9CB1 /* Main_iPhone.storyboard */,
@@ -326,8 +326,8 @@
 				92E747E118D31C2A0040474F /* Pirate.m in Sources */,
 				9225DB0518D1B14000DF9CB1 /* AppDelegate.m in Sources */,
 				92E7481D18D33C0D0040474F /* AFXMLRequestOperation.m in Sources */,
-				92E747DB18D31BAB0040474F /* TableViewController.m in Sources */,
 				92E7481E18D33C0D0040474F /* UIImageView+AFNetworking.m in Sources */,
+				92E7482118D3476C0040474F /* TableViewController.m in Sources */,
 				92E7481C18D33C0D0040474F /* AFURLConnectionOperation.m in Sources */,
 				92E7481A18D33C0D0040474F /* AFNetworkActivityIndicatorManager.m in Sources */,
 				9225DB0118D1B14000DF9CB1 /* main.m in Sources */,
