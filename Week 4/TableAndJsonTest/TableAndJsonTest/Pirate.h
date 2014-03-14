@@ -10,4 +10,10 @@
 
 @interface Pirate : NSObject
 
+@property NSString *name;
+@property NSString *life;
+@property NSString *yearsActive;
+@property NSString *countryOfOrigin;
+@property NSString *comments;
+
 @end

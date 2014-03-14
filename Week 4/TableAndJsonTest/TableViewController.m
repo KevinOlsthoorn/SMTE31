@@ -8,6 +8,10 @@
 
 #import "TableViewController.h"
 
+#import "AFNetworking.h"
+#import "Pirate.h"
+#import "DetailsViewController.h"
+
 @interface TableViewController ()
 
 @end
@@ -26,6 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    pirates = [[NSMutableArray alloc] init];
+    [self loadJsonData];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -56,64 +63,50 @@
     return 0;
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)loadJsonData
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    //Create an URL
+    NSURL *url = [NSURL URLWithString:@"http://athena.fhict.nl/users/i886625/pirates.json"];
+    //Sometimes servers return a wrong header. Use this to add a new accepted type
+    [AFJSONRequestOperation addAcceptableContentTypes:[NSSet setWithObject:@"application/x-javascript"]];
     
-    // Configure the cell...
+    //Create a request object with theurl
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
     
-    return cell;
+    //Create the JSON operation. The ^ blocks are executed when loading is done.
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request,NSHTTPURLResponse *response,id JSON)
+    {
+        //Do something with the JSON data, like parsing
+        [self parseJSONData:JSON];
+    }
+    failure:^(NSURLRequest*request,NSHTTPURLResponse*response,NSError*error,id JSON)
+    {
+        //Do something with the error
+        NSLog(@"Error :%@",response);
+        
+    }];
+    
+    //Start the operation
+    [operation start];
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+-(void)parseJSONData:(id) JSON
 {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+    //Loop through all objects in JSON array
+    for (NSDictionary *dict in JSON) {
+        //Create a pirate object where thejsondata can be stored
+        Pirate *pirate = [[Pirate alloc]init];
+        //Get the JSON data from the dictionary and store it at the Pirate object
+        pirate.name = [dict objectForKey:@"name"];
+        pirate.life = [dict objectForKey:@"life"];
+        pirate.countryOfOrigin = [dict objectForKey:@"country_of_origin"];
+        pirate.yearsActive = [dict objectForKey:@"years_active"];
+        pirate.comments = [dict objectForKey:@"comments"];
+        
+        //Add the pirates to the array
+        [pirates addObject:pirate];
+    }
+    [self.tableView reloadData];
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
