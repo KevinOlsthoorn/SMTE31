@@ -51,16 +51,33 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return pirates.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //Get the cell. Note that this name is the same as in the storyboard
+    static NSString *CellIdentifier = @"Cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    
+    //Set the correct name in the cell.
+    //Do so by looking up the row in indexpath and choosing the same element in the array
+    NSInteger currentRow = indexPath.row;
+    Pirate *currentPirate = [pirates objectAtIndex:currentRow];
+    
+    NSString *textForCell = currentPirate.name;
+    
+    //Set the text in the cell
+    cell.textLabel.text = textForCell;
+    
+    return cell;
 }
 
 -(void)loadJsonData
@@ -79,10 +96,10 @@
         //Do something with the JSON data, like parsing
         [self parseJSONData:JSON];
     }
-    failure:^(NSURLRequest*request,NSHTTPURLResponse*response,NSError*error,id JSON)
+    failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
     {
         //Do something with the error
-        NSLog(@"Error :%@",response);
+        NSLog(@"Error :%@", error);
         
     }];
     
