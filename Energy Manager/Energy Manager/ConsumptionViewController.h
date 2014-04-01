@@ -7,7 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CorePlot-CocoaTouch.h"
 
-@interface ConsumptionViewController : UIViewController
+@interface ConsumptionViewController : UIViewController <CPTPlotDataSource>
+@property (weak, nonatomic) IBOutlet UILabel *ConsumptionUsage;
+@property (weak, nonatomic) IBOutlet UILabel *ConsumptionActual;
+@property (weak, nonatomic) IBOutlet UILabel *ConsumptionLow;
+@property (weak, nonatomic) IBOutlet UILabel *ConsumptionHigh;
+
+@property (weak, nonatomic) IBOutlet UILabel *HarvestingActual;
+@property (weak, nonatomic) IBOutlet UILabel *HarvestingLow;
+@property (weak, nonatomic) IBOutlet UILabel *HarvestingHigh;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *hostView;
 
 @end
