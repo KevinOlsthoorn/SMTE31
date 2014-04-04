@@ -10,4 +10,12 @@
 
 @interface OverviewViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *Panel1Power;
+@property (weak, nonatomic) IBOutlet UILabel *Panel2Power;
+@property (weak, nonatomic) IBOutlet UILabel *SolarPower;
+@property (weak, nonatomic) IBOutlet UILabel *NetPower;
+@property (weak, nonatomic) IBOutlet UILabel *HousePower;
+
+@property (weak, nonatomic) IBOutlet UILabel *NetPowerArrow;
+
 @end
