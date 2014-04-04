@@ -565,6 +565,24 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Harvesting" id="y2E-Mc-zDT"/>
+                    <connections>
+                        <outlet property="EnergyLifetime" destination="wE3-Og-JmL" id="1qY-py-psh"/>
+                        <outlet property="EnergyToday" destination="Y7C-L6-PR0" id="L0h-Kh-YzC"/>
+                        <outlet property="GridCurrent" destination="5Ps-hp-vC4" id="UR3-kA-WSG"/>
+                        <outlet property="GridFrequency" destination="3LJ-kC-7YW" id="7CO-qt-6yt"/>
+                        <outlet property="GridVoltage" destination="6Nw-1c-X3A" id="h8B-Ew-Gd6"/>
+                        <outlet property="Input1Current" destination="9MH-HQ-0VY" id="rg6-DV-rlB"/>
+                        <outlet property="Input1Power" destination="SWf-ku-FII" id="pw3-IC-c1e"/>
+                        <outlet property="Input1Voltage" destination="pSd-25-pUX" id="422-Tj-K3e"/>
+                        <outlet property="Input2Current" destination="W6g-ZB-i2w" id="F4I-Sl-Z9d"/>
+                        <outlet property="Input2Power" destination="m9d-vu-1sa" id="dP6-xt-B0u"/>
+                        <outlet property="Input2Voltage" destination="HZj-H3-bnM" id="xv1-hK-NsI"/>
+                        <outlet property="PowerEfficiency" destination="4qM-51-tmN" id="h4K-Cy-27f"/>
+                        <outlet property="PowerIn" destination="K8D-Lf-yKi" id="Ngn-9Z-U0K"/>
+                        <outlet property="PowerOut" destination="7yw-9r-4Ph" id="U5L-WO-Sg6"/>
+                        <outlet property="PowerPeakLifetime" destination="Cgt-Yz-mgy" id="GsI-2B-fNy"/>
+                        <outlet property="PowerPeakToday" destination="Zlg-8q-F9Z" id="wF8-Jd-6OA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OI2-0E-oUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
