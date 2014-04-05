@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface MainViewController : UIViewController
+@interface MainViewController : UIViewController <CLLocationManagerDelegate>
+
+@property (weak, nonatomic) IBOutlet UILabel *DistanceLabel;
 
 @end
