@@ -35,4 +35,50 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)parseJson
+{
+    NSData *jsonData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://www.energy.xk140.nl/db_information.php?json=conv"]];
+    
+    NSError *error;
+    NSMutableDictionary *energyData = [NSJSONSerialization
+                                       JSONObjectWithData:jsonData
+                                       options:NSJSONReadingMutableContainers
+                                       error:&error];
+    
+    if (error)
+    {
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    else
+    {
+        float investment = 3250.0f;
+        NSString *investmentS = [NSString stringWithFormat:@"%.2f", investment];
+        _Investment.text = [NSString stringWithFormat:@"€ %@", investmentS];
+        
+        float earnings = [[energyData objectForKey:@"energylifetime"] floatValue] * 0.215f;
+        _Earnings.text = [NSString stringWithFormat:@"€ %.2f", earnings];
+        
+        NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        NSDateComponents *components = [[NSDateComponents alloc] init];
+        [components setYear:2013];
+        [components setMonth:4];
+        [components setDay:13];
+        NSDate *purchaseData = [calendar dateFromComponents:components];
+        NSDate *now = [NSDate date];
+        
+        float differenceInSeconds = [now timeIntervalSinceDate:purchaseData];
+        float percentageTillReturn = (earnings / investment) * 100.0f;
+        float intervalUntilReturn = (differenceInSeconds/percentageTillReturn)*100;
+        
+        NSDate *returnOffInvestment = [NSDate dateWithTimeInterval:intervalUntilReturn sinceDate:purchaseData];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateStyle:NSDateFormatterLongStyle];
+        //[formatter setDateFormat:@"dd MM yyyy"];
+        _ReturnOnInvestment.text = [NSString stringWithFormat:@"%@", [formatter stringFromDate:returnOffInvestment]];
+        
+        float emissionReduction = [[energyData objectForKey:@"energylifetime"] floatValue] * 0.7f;
+        _EmissionReduction.text = [NSString stringWithFormat:@"%.2f %@", emissionReduction, @"kg"];
+    }
+}
+
 @end

@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JsonViewController.h"
 
-@interface ProfitViewController : UIViewController
+@interface ProfitViewController : JsonViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *Investment;
+@property (weak, nonatomic) IBOutlet UILabel *Earnings;
+@property (weak, nonatomic) IBOutlet UILabel *ReturnOnInvestment;
+
+@property (weak, nonatomic) IBOutlet UILabel *EmissionReduction;
 
 @end

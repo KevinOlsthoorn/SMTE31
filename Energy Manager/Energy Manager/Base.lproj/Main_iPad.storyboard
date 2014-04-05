@@ -616,7 +616,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="####" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ab4-fd-bUm">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="€ 3250,00" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ab4-fd-bUm">
                                 <rect key="frame" x="380" y="143" width="368" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -669,6 +669,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Profit" id="trQ-AY-uO8"/>
+                    <connections>
+                        <outlet property="Earnings" destination="6Mv-Fz-P4O" id="TnQ-mU-yEq"/>
+                        <outlet property="EmissionReduction" destination="VPu-hZ-1wG" id="etm-Cc-Hq4"/>
+                        <outlet property="Investment" destination="Ab4-fd-bUm" id="NL8-Ds-xon"/>
+                        <outlet property="ReturnOnInvestment" destination="QwY-P7-Grj" id="VnP-83-anw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1lC-8m-wBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
