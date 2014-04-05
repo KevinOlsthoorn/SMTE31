@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JsonViewController.h"
 
-@interface GasViewController : UIViewController
+@interface GasViewController : JsonViewController
 
 @end
