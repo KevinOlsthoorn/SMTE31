@@ -11,4 +11,6 @@
 
 @interface GasViewController : JsonViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *GasUsage;
+
 @end

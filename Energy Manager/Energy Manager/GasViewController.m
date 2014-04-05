@@ -35,4 +35,25 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)parseJson
+{
+    NSData *jsonData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://www.energy.xk140.nl/db_information.php?json=meas"]];
+    
+    NSError *error;
+    NSMutableDictionary *energyData = [NSJSONSerialization
+                                       JSONObjectWithData:jsonData
+                                       options:NSJSONReadingMutableContainers
+                                       error:&error];
+    
+    if (error)
+    {
+        NSLog(@"%@", [error localizedDescription]);
+    }
+    else
+    {
+        _GasUsage.text = [NSString stringWithFormat:@"%@ m3", [energyData objectForKey:@"consgas"]];
+    }
+}
+
+
 @end
