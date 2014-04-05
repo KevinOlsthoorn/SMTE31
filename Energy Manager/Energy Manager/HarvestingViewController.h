@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JsonViewController.h"
 
-@interface HarvestingViewController : UIViewController
+@interface HarvestingViewController : JsonViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *EnergyLifetime;
 @property (weak, nonatomic) IBOutlet UILabel *PowerPeakLifetime;
