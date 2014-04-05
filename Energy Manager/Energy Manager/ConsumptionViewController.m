@@ -28,8 +28,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    [self parseJson];
-    
     // We need a hostview, you can create one in IB (and create an outlet) or just do this:
     CPTGraphHostingView* hostView = [[CPTGraphHostingView alloc] initWithFrame:_hostView.frame];
     [self.view addSubview: hostView];
@@ -70,13 +68,13 @@
 
 // This method is here because this class also functions as datasource for our graph
 // Therefore this class implements the CPTPlotDataSource protocol
--(NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plotnumberOfRecords {
+- (NSUInteger)numberOfRecordsForPlot:(CPTPlot *)plotnumberOfRecords {
     return 10; // Our sample graph contains 9 'points'
 }
 
 // This method is here because this class also functions as datasource for our graph
 // Therefore this class implements the CPTPlotDataSource protocol
--(NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index
+- (NSNumber *)numberForPlot:(CPTPlot *)plot field:(NSUInteger)fieldEnum recordIndex:(NSUInteger)index
 {
     // We need to provide an X or Y (this method will be called for each) value for every index
     int x = index;
@@ -92,13 +90,13 @@
     }
 }
 
--(void)parseJson
+- (void)parseJson
 {
-    NSData *allData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://www.energy.xk140.nl/db_information.php?json=meas"]];
+    NSData *jsonData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://www.energy.xk140.nl/db_information.php?json=meas"]];
     
     NSError *error;
-    NSMutableDictionary *allCourses = [NSJSONSerialization
-                                       JSONObjectWithData:allData
+    NSMutableDictionary *energyData = [NSJSONSerialization
+                                       JSONObjectWithData:jsonData
                                        options:NSJSONReadingMutableContainers
                                        error:&error];
 
@@ -108,14 +106,14 @@
     }
     else
     {
-        _ConsumptionUsage.text = [NSString stringWithFormat:@"%@%@", [allCourses objectForKey:@"consact"], @" Watt"];
-        _ConsumptionActual.text = [NSString stringWithFormat:@"%@%@", [allCourses objectForKey:@"consact"], @" Watt"];
-        _ConsumptionLow.text = [NSString stringWithFormat:@"%@%@", [allCourses objectForKey:@"conslow"], @" kWh"];
-        _ConsumptionHigh.text = [NSString stringWithFormat:@"%@%@", [allCourses objectForKey:@"conshigh"], @" kWh"];
+        _ConsumptionUsage.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"consact"], @" Watt"];
+        _ConsumptionActual.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"consact"], @" Watt"];
+        _ConsumptionLow.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"conslow"], @" kWh"];
+        _ConsumptionHigh.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"conshigh"], @" kWh"];
         
-        _HarvestingActual.text = [NSString stringWithFormat:@"%@%@", [allCourses objectForKey:@"harvact"], @" Watt"];
-        _HarvestingLow.text = [NSString stringWithFormat:@"%@%@", [allCourses objectForKey:@"harvlow"], @" kWh"];
-        _HarvestingHigh.text = [NSString stringWithFormat:@"%@%@", [allCourses objectForKey:@"harvhigh"], @" kWh"];
+        _HarvestingActual.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"harvact"], @" Watt"];
+        _HarvestingLow.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"harvlow"], @" kWh"];
+        _HarvestingHigh.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"harvhigh"], @" kWh"];
     }
 }
 

@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "CorePlot-CocoaTouch.h"
+#import "JsonViewController.h"
 
-@interface ConsumptionViewController : UIViewController <CPTPlotDataSource>
+@interface ConsumptionViewController : JsonViewController <CPTPlotDataSource>
+
 @property (weak, nonatomic) IBOutlet UILabel *ConsumptionUsage;
 @property (weak, nonatomic) IBOutlet UILabel *ConsumptionActual;
 @property (weak, nonatomic) IBOutlet UILabel *ConsumptionLow;
