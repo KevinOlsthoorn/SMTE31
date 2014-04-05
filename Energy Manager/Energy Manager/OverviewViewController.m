@@ -27,8 +27,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    [self parseJson];
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,13 +45,13 @@
                                            JSONObjectWithData:jsonDataConv
                                            options:NSJSONReadingMutableContainers
                                            error:&errorConv];
-
+    
     NSError *errorMeas;
     NSMutableDictionary *energyDataMeas = [NSJSONSerialization
                                            JSONObjectWithData:jsonDataMeas
                                            options:NSJSONReadingMutableContainers
                                            error:&errorMeas];
-
+    
     
     if (errorConv || errorMeas)
     {
@@ -72,14 +70,15 @@
         _Panel2Power.text = [NSString stringWithFormat:@"%@%@", [energyDataConv objectForKey:@"power2"], @" Watt"];
         _SolarPower.text = [NSString stringWithFormat:@"%@%@", [energyDataConv objectForKey:@"netpower"], @" Watt"];
         
-        float consact = [[energyDataMeas objectForKey:@"consact"] floatValue] * 1000.0f;
-        float netPower = consact - [[energyDataConv objectForKey:@"netpower"] floatValue];
-        NSString *netPowerS = [NSString stringWithFormat:@"%.1f", netPower];
-        NSString *consactS = [NSString stringWithFormat:@"%.1f", consact];
-        _NetPower.text = [NSString stringWithFormat:@"%@%@", netPowerS, @" Watt"];
-        _HousePower.text = [NSString stringWithFormat:@"%@%@", consactS, @" Watt"];
+        float netPower = [[energyDataMeas objectForKey:@"harvact"] floatValue] * 1000.0f;
+        float actualEnergy = [[energyDataConv objectForKey:@"netpower"] floatValue] - netPower;
         
-        _NetPowerArrow.text = netPower >= 0 ? @"→" : @"←";
+        NSString *netPowerS = [NSString stringWithFormat:@"%.1f", fabsf(netPower)];
+        NSString *actualEnergyS = [NSString stringWithFormat:@"%.1f", actualEnergy];
+        _NetPower.text = [NSString stringWithFormat:@"%@%@", netPowerS, @" Watt"];
+        _HousePower.text = [NSString stringWithFormat:@"%@%@", actualEnergyS, @" Watt"];
+        
+        _NetPowerArrow.text = netPower <= 0 ? @"→" : @"←";
     }
 }
 

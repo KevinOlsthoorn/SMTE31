@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JsonViewController.h"
 
-@interface OverviewViewController : UIViewController
+@interface OverviewViewController : JsonViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *Panel1Power;
 @property (weak, nonatomic) IBOutlet UILabel *Panel2Power;
