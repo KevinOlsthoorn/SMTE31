@@ -70,13 +70,11 @@
         _Panel2Power.text = [NSString stringWithFormat:@"%@%@", [energyDataConv objectForKey:@"power2"], @" Watt"];
         _SolarPower.text = [NSString stringWithFormat:@"%@%@", [energyDataConv objectForKey:@"netpower"], @" Watt"];
         
-        float netPower = [[energyDataMeas objectForKey:@"harvact"] floatValue] * 1000.0f;
-        float actualEnergy = [[energyDataConv objectForKey:@"netpower"] floatValue] - netPower;
+        float netPower = ([[energyDataMeas objectForKey:@"harvact"] floatValue] - [[energyDataMeas objectForKey:@"consact"] floatValue]) * 1000.0f;
         
         NSString *netPowerS = [NSString stringWithFormat:@"%.1f", fabsf(netPower)];
-        NSString *actualEnergyS = [NSString stringWithFormat:@"%.1f", actualEnergy];
         _NetPower.text = [NSString stringWithFormat:@"%@%@", netPowerS, @" Watt"];
-        _HousePower.text = [NSString stringWithFormat:@"%@%@", actualEnergyS, @" Watt"];
+        _HousePower.text = [NSString stringWithFormat:@"%.1f%@", fabsf([[energyDataMeas objectForKey:@"usedEnergy"] floatValue]), @" Watt"];
         
         _NetPowerArrow.text = netPower <= 0 ? @"→" : @"←";
     }
