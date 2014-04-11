@@ -46,9 +46,9 @@ NSMutableArray *xAxisDateLabels;
     
     // Create a CPTGraph object and add to hostView
     CPTGraph *graph = [[CPTXYGraph alloc] initWithFrame:hostView.bounds];
-    CPTTheme *theme = [CPTTheme themeNamed:kCPTSlateTheme];
+    CPTTheme *theme = [CPTTheme themeNamed:kCPTDarkGradientTheme];
     graph.plotAreaFrame.paddingLeft = 60.0;
-    graph.plotAreaFrame.paddingBottom = 60.0;
+    graph.plotAreaFrame.paddingBottom = 90.0;
     [graph applyTheme:theme];
     hostView.hostedGraph = graph;
     
@@ -57,8 +57,18 @@ NSMutableArray *xAxisDateLabels;
     
     plotSpace.allowsUserInteraction = YES;
     
-    // Create the plot (we do not define actual x/y values yet, these will be supplied by the datasource...)
+    // Create the plot
     CPTScatterPlot* plot = [[CPTScatterPlot alloc] initWithFrame:CGRectZero];
+    CPTMutableLineStyle *lineStyle = [plot.dataLineStyle mutableCopy];
+    lineStyle.lineWidth              = 2.0;
+    lineStyle.lineColor              = [CPTColor greenColor];
+    plot.dataLineStyle = lineStyle;
+    
+    // Put an area color under the plot above
+    CPTColor *areaColor       = [CPTColor colorWithComponentRed:0.3 green:1.0 blue:0.3 alpha:0.2];
+    CPTFill *areaGradientFill = [CPTFill fillWithColor:areaColor];
+    plot.areaFill      = areaGradientFill;
+    plot.areaBaseValue = CPTDecimalFromDouble(0);
     
     // Let's keep it simple and let this class act as datasource (therefore we implemtn <CPTPlotDataSource>)
     plot.dataSource = self;
@@ -87,23 +97,30 @@ NSMutableArray *xAxisDateLabels;
     // 2 - Get axis set
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *) hostView.hostedGraph.axisSet;
     // 3 - Configure x-axis
-    CPTAxis *x = axisSet.xAxis;
-    CPTAxis *y = axisSet.yAxis;
+    CPTXYAxis *x = axisSet.xAxis;
+    x.axisConstraints = [CPTConstraints constraintWithLowerOffset:0];
+    x.title = @"Time";
+    x.titleOffset = 60.0f;
+    x.titleTextStyle = axisTitleStyle;
+    x.labelTextStyle = axisTextStyle;
+    // 4 - Configure y-axis
+    CPTXYAxis *y = axisSet.yAxis;
+    y.axisConstraints = [CPTConstraints constraintWithLowerOffset:0];
     y.title = @"Usage (Watt)";
     y.titleTextStyle = axisTitleStyle;
-    y.titleOffset = -40.0f;
+    y.titleOffset = -50.0f;
     y.axisLineStyle = axisLineStyle;
     y.majorGridLineStyle = gridLineStyle;
     y.labelingPolicy = CPTAxisLabelingPolicyNone;
     y.labelTextStyle = axisTextStyle;
-    y.labelOffset = 16.0f;
+    y.labelOffset = 26.0f;
     y.majorTickLineStyle = axisLineStyle;
     y.majorTickLength = 4.0f;
     y.minorTickLength = 2.0f;
     y.tickDirection = CPTSignPositive;
     NSInteger majorIncrement = 100;
     NSInteger minorIncrement = 50;
-    CGFloat yMax = 2000.0f;
+    CGFloat yMax = [[graphDataDictionary valueForKeyPath:@"@max.consact.floatValue"] floatValue] * 1000.0f; // Determine the maximum y-value.
     NSMutableSet *yLabels = [NSMutableSet set];
     NSMutableSet *yMajorLocations = [NSMutableSet set];
     NSMutableSet *yMinorLocations = [NSMutableSet set];
@@ -148,10 +165,13 @@ NSMutableArray *xAxisDateLabels;
     @try {
         for (NSNumber *tickLocation in ticks) {
             CPTAxisLabel *newLabel = [[CPTAxisLabel alloc] initWithText: [xAxisDateLabels objectAtIndex:labelLocation++] textStyle:x.labelTextStyle];
-            newLabel.tickLocation = [tickLocation decimalValue];
-            newLabel.offset = x.labelOffset + x.majorTickLength;
-            newLabel.rotation = M_PI/3.5f;
-            [customLabels addObject:newLabel];
+            if (tickLocation.integerValue % 10 == 0) // Making sure only a date is printed 1 out of 10.
+            {
+                newLabel.tickLocation = [tickLocation decimalValue];
+                newLabel.offset = x.labelOffset + x.majorTickLength;
+                newLabel.rotation = M_PI/3.5f;
+                [customLabels addObject:newLabel];
+            }
         }
     }
     @catch (NSException * e) {
