@@ -12,5 +12,6 @@
 @interface GasViewController : JsonViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *GasUsage;
+@property (weak, nonatomic) IBOutlet UIWebView *WebView;
 
 @end

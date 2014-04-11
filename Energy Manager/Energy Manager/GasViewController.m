@@ -27,6 +27,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+
+    NSURL *url = [NSURL URLWithString:@"http://www.energy.xk140.nl/stockOptionsHarvSmall.php?year=2014&month=04&day=05"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    [_WebView loadRequest:request];
 }
 
 - (void)didReceiveMemoryWarning

@@ -717,6 +717,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="agW-iq-tQ7">
+                                <rect key="frame" x="20" y="428" width="728" height="576"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -726,6 +731,7 @@
                     <navigationItem key="navigationItem" title="Gas" id="1ET-9H-u2E"/>
                     <connections>
                         <outlet property="GasUsage" destination="DPM-6v-PmR" id="FdT-n2-w7Z"/>
+                        <outlet property="WebView" destination="agW-iq-tQ7" id="xsM-sn-gD5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tu1-q7-uDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
