@@ -17,6 +17,8 @@
 NSData *graphData;
 NSArray *graphDataDictionary;
 NSMutableArray *xAxisDateLabels;
+CPTScatterPlot* plot;
+CPTXYAxis *x;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,17 +31,6 @@ NSMutableArray *xAxisDateLabels;
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-    
-    NSError *graphDataError;
-    graphData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://www.energy.xk140.nl/json_data.php?type=cons"]];
-    graphDataDictionary = [NSJSONSerialization
-                                       JSONObjectWithData:graphData
-                                       options:kNilOptions
-                                       error:&graphDataError];
-    xAxisDateLabels = [[NSMutableArray alloc] init];
-    
     // We need a hostview, you can create one in IB (and create an outlet) or just do this:
     CPTGraphHostingView* hostView = [[CPTGraphHostingView alloc] initWithFrame:_hostView.frame];
     [self.view addSubview: hostView];
@@ -58,7 +49,7 @@ NSMutableArray *xAxisDateLabels;
     plotSpace.allowsUserInteraction = YES;
     
     // Create the plot
-    CPTScatterPlot* plot = [[CPTScatterPlot alloc] initWithFrame:CGRectZero];
+    plot = [[CPTScatterPlot alloc] initWithFrame:CGRectZero];
     CPTMutableLineStyle *lineStyle = [plot.dataLineStyle mutableCopy];
     lineStyle.lineWidth              = 2.0;
     lineStyle.lineColor              = [CPTColor greenColor];
@@ -97,7 +88,7 @@ NSMutableArray *xAxisDateLabels;
     // 2 - Get axis set
     CPTXYAxisSet *axisSet = (CPTXYAxisSet *) hostView.hostedGraph.axisSet;
     // 3 - Configure x-axis
-    CPTXYAxis *x = axisSet.xAxis;
+    x = axisSet.xAxis;
     x.axisConstraints = [CPTConstraints constraintWithLowerOffset:0];
     x.title = @"Time";
     x.titleOffset = 60.0f;
@@ -120,6 +111,9 @@ NSMutableArray *xAxisDateLabels;
     y.tickDirection = CPTSignPositive;
     NSInteger majorIncrement = 100;
     NSInteger minorIncrement = 50;
+    
+    [super viewDidLoad];
+    
     CGFloat yMax = [[graphDataDictionary valueForKeyPath:@"@max.consact.floatValue"] floatValue] * 1000.0f; // Determine the maximum y-value.
     NSMutableSet *yLabels = [NSMutableSet set];
     NSMutableSet *yMajorLocations = [NSMutableSet set];
@@ -143,44 +137,7 @@ NSMutableArray *xAxisDateLabels;
     y.majorTickLocations = yMajorLocations;
     y.minorTickLocations = yMinorLocations;
     
-    for (unsigned int i = 0; i < graphDataDictionary.count; i++)
-    {
-        NSDictionary *graph = [graphDataDictionary objectAtIndex:i];
-        NSNumber *timestamp = [NSNumber numberWithUnsignedInt: [[graph objectForKey:@"timestamp"] intValue]];
-        NSTimeInterval _interval = timestamp.doubleValue - (60*60)*2;
-        NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
-        NSDateFormatter *_formatter= [[NSDateFormatter alloc] init];
-        [_formatter setDateFormat:@"hh:mm:ss"];
-        [xAxisDateLabels addObject:[_formatter stringFromDate:date]];
-    }
-    
     x.labelingPolicy = CPTAxisLabelingPolicyNone; // This allows us to create custom axis labels for x axis
-    NSMutableArray *ticks = [NSMutableArray arrayWithCapacity:1];
-    for(unsigned int counter = 0; counter < [xAxisDateLabels count];counter++) {
-        // Here the instance variable _axisLabelStrings is a list of custom labels
-        [ticks addObject:[NSNumber numberWithInt:counter]];
-    }
-    NSUInteger labelLocation = 0;
-    NSMutableArray* customLabels = [NSMutableArray arrayWithCapacity:[xAxisDateLabels count]];
-    @try {
-        for (NSNumber *tickLocation in ticks) {
-            CPTAxisLabel *newLabel = [[CPTAxisLabel alloc] initWithText: [xAxisDateLabels objectAtIndex:labelLocation++] textStyle:x.labelTextStyle];
-            if (tickLocation.integerValue % 10 == 0) // Making sure only a date is printed 1 out of 10.
-            {
-                newLabel.tickLocation = [tickLocation decimalValue];
-                newLabel.offset = x.labelOffset + x.majorTickLength;
-                newLabel.rotation = M_PI/3.5f;
-                [customLabels addObject:newLabel];
-            }
-        }
-    }
-    @catch (NSException * e) {
-        NSLog(@"An exception occurred while creating date labels for x-axis");
-    }
-    @finally {
-        x.axisLabels =  [NSSet setWithArray:customLabels];
-    }
-    x.majorTickLocations = [NSSet setWithArray:ticks];
     
     hostView.autoresizingMask = (UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight);
     
@@ -234,15 +191,70 @@ NSMutableArray *xAxisDateLabels;
     }
     else
     {
-        _ConsumptionUsage.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"consact"], @" Watt"];
-        _ConsumptionActual.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"consact"], @" Watt"];
+        // Reloading the json information into the labels.
+        _ConsumptionUsage.text = [NSString stringWithFormat:@"%.3f%@", fabsf([[energyData objectForKey:@"usedEnergy"] floatValue]), @" Watt"];
+        _ConsumptionActual.text = [NSString stringWithFormat:@"%.3f%@", [[energyData objectForKey:@"consact"] floatValue] * 1000.0f, @" Watt"];
         _ConsumptionLow.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"conslow"], @" kWh"];
         _ConsumptionHigh.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"conshigh"], @" kWh"];
         
         _HarvestingActual.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"harvact"], @" Watt"];
         _HarvestingLow.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"harvlow"], @" kWh"];
         _HarvestingHigh.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"harvhigh"], @" kWh"];
+        
+        // Reloading the json information into the plot.
+        NSError *graphDataError;
+        graphData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://www.energy.xk140.nl/json_data.php?type=cons"]];
+        graphDataDictionary = [NSJSONSerialization
+                               JSONObjectWithData:graphData
+                               options:kNilOptions
+                               error:&graphDataError];
+        xAxisDateLabels = [[NSMutableArray alloc] init];
+        
+        [self generateXAxisDates];
+        
+        [plot reloadData];
     }
+}
+
+- (void)generateXAxisDates
+{
+    for (unsigned int i = 0; i < graphDataDictionary.count; i++)
+    {
+        NSDictionary *graph = [graphDataDictionary objectAtIndex:i];
+        NSNumber *timestamp = [NSNumber numberWithUnsignedInt: [[graph objectForKey:@"timestamp"] intValue]];
+        NSTimeInterval _interval = timestamp.doubleValue - (60*60)*2;
+        NSDate *date = [NSDate dateWithTimeIntervalSince1970:_interval];
+        NSDateFormatter *_formatter= [[NSDateFormatter alloc] init];
+        [_formatter setDateFormat:@"hh:mm:ss"];
+        [xAxisDateLabels addObject:[_formatter stringFromDate:date]];
+    }
+    
+    NSMutableArray *ticks = [NSMutableArray arrayWithCapacity:1];
+    for(unsigned int counter = 0; counter < [xAxisDateLabels count];counter++) {
+        // Here the instance variable _axisLabelStrings is a list of custom labels
+        [ticks addObject:[NSNumber numberWithInt:counter]];
+    }
+    NSUInteger labelLocation = 0;
+    NSMutableArray* customLabels = [NSMutableArray arrayWithCapacity:[xAxisDateLabels count]];
+    @try {
+        for (NSNumber *tickLocation in ticks) {
+            CPTAxisLabel *newLabel = [[CPTAxisLabel alloc] initWithText: [xAxisDateLabels objectAtIndex:labelLocation++] textStyle:x.labelTextStyle];
+            if (tickLocation.integerValue % 10 == 0) // Making sure only a date is printed 1 out of 10.
+            {
+                newLabel.tickLocation = [tickLocation decimalValue];
+                newLabel.offset = x.labelOffset + x.majorTickLength;
+                newLabel.rotation = M_PI/3.5f;
+                [customLabels addObject:newLabel];
+            }
+        }
+    }
+    @catch (NSException * e) {
+        NSLog(@"An exception occurred while creating date labels for x-axis");
+    }
+    @finally {
+        x.axisLabels =  [NSSet setWithArray:customLabels];
+    }
+    x.majorTickLocations = [NSSet setWithArray:ticks];
 }
 
 @end
