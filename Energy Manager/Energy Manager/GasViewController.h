@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CorePlot-CocoaTouch.h"
 #import "JsonViewController.h"
 
-@interface GasViewController : JsonViewController
+@interface GasViewController : JsonViewController <CPTPlotDataSource>
 
 @property (weak, nonatomic) IBOutlet UILabel *GasUsage;
 @property (weak, nonatomic) IBOutlet UIWebView *WebView;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *hostView;
 
 @end
