@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CorePlot-CocoaTouch.h"
 #import "JsonViewController.h"
 
-@interface HarvestingViewController : JsonViewController
+@interface HarvestingViewController : JsonViewController <CPTPlotDataSource>
 
 @property (weak, nonatomic) IBOutlet UILabel *EnergyLifetime;
 @property (weak, nonatomic) IBOutlet UILabel *PowerPeakLifetime;
@@ -31,5 +32,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *GridVoltage;
 @property (weak, nonatomic) IBOutlet UILabel *GridCurrent;
 @property (weak, nonatomic) IBOutlet UILabel *GridFrequency;
+
+@property (weak, nonatomic) IBOutlet UIScrollView *hostView;
 
 @end
