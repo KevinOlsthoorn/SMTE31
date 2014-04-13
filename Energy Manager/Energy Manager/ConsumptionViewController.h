@@ -8,9 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "CorePlot-CocoaTouch.h"
-#import "JsonViewController.h"
+#import "JsonGraphViewController.h"
 
-@interface ConsumptionViewController : JsonViewController <CPTPlotDataSource>
+@interface ConsumptionViewController : JsonGraphViewController
 
 @property (weak, nonatomic) IBOutlet UILabel *ConsumptionUsage;
 @property (weak, nonatomic) IBOutlet UILabel *ConsumptionActual;
@@ -21,6 +21,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *HarvestingLow;
 @property (weak, nonatomic) IBOutlet UILabel *HarvestingHigh;
 
-@property (weak, nonatomic) IBOutlet UIScrollView *hostView;
+@property (weak, nonatomic) IBOutlet UIScrollView *GraphScrollView;
 
 @end
