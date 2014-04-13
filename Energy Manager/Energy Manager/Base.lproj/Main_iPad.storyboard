@@ -634,6 +634,7 @@
                     <connections>
                         <outlet property="EnergyLifetime" destination="wE3-Og-JmL" id="1qY-py-psh"/>
                         <outlet property="EnergyToday" destination="Y7C-L6-PR0" id="L0h-Kh-YzC"/>
+                        <outlet property="GraphScrollView" destination="BxQ-DH-FeZ" id="9yQ-lw-B2g"/>
                         <outlet property="GridCurrent" destination="5Ps-hp-vC4" id="UR3-kA-WSG"/>
                         <outlet property="GridFrequency" destination="3LJ-kC-7YW" id="7CO-qt-6yt"/>
                         <outlet property="GridVoltage" destination="6Nw-1c-X3A" id="h8B-Ew-Gd6"/>
@@ -648,7 +649,6 @@
                         <outlet property="PowerOut" destination="7yw-9r-4Ph" id="U5L-WO-Sg6"/>
                         <outlet property="PowerPeakLifetime" destination="Cgt-Yz-mgy" id="GsI-2B-fNy"/>
                         <outlet property="PowerPeakToday" destination="Zlg-8q-F9Z" id="wF8-Jd-6OA"/>
-                        <outlet property="hostView" destination="BxQ-DH-FeZ" id="h1y-ux-Lyc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OI2-0E-oUd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -794,7 +794,7 @@
                     <navigationItem key="navigationItem" title="Gas" id="1ET-9H-u2E"/>
                     <connections>
                         <outlet property="GasUsage" destination="DPM-6v-PmR" id="FdT-n2-w7Z"/>
-                        <outlet property="hostView" destination="wB9-TB-YTR" id="EbT-kL-7fW"/>
+                        <outlet property="GraphScrollView" destination="wB9-TB-YTR" id="N4Q-Cv-1HB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tu1-q7-uDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -933,10 +933,10 @@
                         <outlet property="ConsumptionHigh" destination="bbB-R6-1J5" id="aQh-p1-81x"/>
                         <outlet property="ConsumptionLow" destination="6Hq-u5-7sd" id="MlL-5w-IAY"/>
                         <outlet property="ConsumptionUsage" destination="RNO-J6-Cvr" id="mCT-13-cFO"/>
+                        <outlet property="GraphScrollView" destination="EhP-MZ-oKB" id="ziz-GV-CFZ"/>
                         <outlet property="HarvestingActual" destination="qdd-4d-CmX" id="T23-Wd-icL"/>
                         <outlet property="HarvestingHigh" destination="3Bd-3A-Bm3" id="dc6-1V-asz"/>
                         <outlet property="HarvestingLow" destination="LYx-pL-Yow" id="0pp-f0-Ybe"/>
-                        <outlet property="hostView" destination="EhP-MZ-oKB" id="SCq-mP-0Rs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Ca-Lh-ACb" userLabel="First Responder" sceneMemberID="firstResponder"/>
