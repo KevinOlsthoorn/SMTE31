@@ -107,7 +107,7 @@
     // Setting all the editable graph settings on their default value.
     _yMinValue = 0.0f;
     _majorIncrement = 100;
-    _minorIncrement = 20;
+    _minorIncrement = 10;
     
     [super viewDidLoad];
     
