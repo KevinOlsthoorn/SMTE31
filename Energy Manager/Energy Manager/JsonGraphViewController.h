@@ -24,6 +24,8 @@
 
 @property CGFloat yMaxValue;
 @property CGFloat yMinValue;
+@property NSInteger majorIncrement;
+@property NSInteger minorIncrement;
 
 @property (weak, nonatomic) IBOutlet UIScrollView *GraphScrollView;
 

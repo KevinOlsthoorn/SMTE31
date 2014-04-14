@@ -103,13 +103,18 @@
     _y.majorTickLength = 4.0f;
     _y.minorTickLength = 2.0f;
     _y.tickDirection = CPTSignPositive;
-    NSInteger majorIncrement = 100;
-    NSInteger minorIncrement = 20;
+    
+    // Setting all the editable graph settings on their default value.
     _yMinValue = 0.0f;
+    _majorIncrement = 100;
+    _minorIncrement = 20;
     
     [super viewDidLoad];
     
     [self setGraphSettings];
+    
+    NSInteger majorIncrement = _majorIncrement;
+    NSInteger minorIncrement = _minorIncrement;
     
     CPTFill *areaGradientFill = [CPTFill fillWithColor:_areaColor];
     _plot.areaFill      = areaGradientFill;
