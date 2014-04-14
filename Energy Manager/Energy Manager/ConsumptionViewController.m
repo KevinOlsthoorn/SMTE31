@@ -81,7 +81,7 @@
         _ConsumptionLow.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"conslow"], @" kWh"];
         _ConsumptionHigh.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"conshigh"], @" kWh"];
         
-        _HarvestingActual.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"harvact"], @" Watt"];
+        _HarvestingActual.text = [NSString stringWithFormat:@"%.3f%@", [[energyData objectForKey:@"harvact"] floatValue] * 1000.0f, @" Watt"];
         _HarvestingLow.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"harvlow"], @" kWh"];
         _HarvestingHigh.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"harvhigh"], @" kWh"];
         
@@ -99,19 +99,5 @@
     
     [super.plot reloadData];
 }
-
-/*-(CPTPlotRange *)plotSpace:(CPTPlotSpace *)space willChangePlotRangeTo:(CPTPlotRange *)newRange forCoordinate:(CPTCoordinate)coordinate
-{
-    // Adjust axis to keep them in view at the left and bottom;
-    // adjust scale-labels to match the scroll.
-    
-    if (coordinate == CPTCoordinateY) {
-        //CPTXYPlotSpace *space = (CPTXYPlotSpace *) hostView.hostedGraph.defaultPlotSpace;
-        CPTPlotRange *range = [[CPTPlotRange alloc] initWithLocation:[[NSNumber numberWithInt:0] decimalValue] length:[[NSNumber numberWithInt:3000] decimalValue]];
-        newRange = [range mutableCopy];
-    }
-    
-    return newRange;
-}*/
 
 @end
