@@ -55,6 +55,8 @@
 {
     super.y.title = @"Gas today (dm3)";
     super.yMaxValue = ([[super.graphDataDictionary valueForKeyPath:@"@max.consgas.floatValue"] floatValue] - [[[super.graphDataDictionary objectAtIndex:0] objectForKey:@"consgas"] floatValue])*1000.0f;
+    super.majorIncrement = 4;
+    super.minorIncrement = 1;
 }
 
 - (void)parseJson
