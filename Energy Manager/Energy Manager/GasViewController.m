@@ -55,8 +55,10 @@
 {
     super.y.title = @"Gas today (dm3)";
     super.yMaxValue = ([[super.graphDataDictionary valueForKeyPath:@"@max.consgas.floatValue"] floatValue] - [[[super.graphDataDictionary objectAtIndex:0] objectForKey:@"consgas"] floatValue])*1000.0f;
-    super.majorIncrement = 4;
-    super.minorIncrement = 1;
+    unsigned short increment = super.yMaxValue / 30; // Making sure we'll only see 30 y-points in our graph.
+    increment = (increment/10)*10; // Making sure the value is a round number.
+    super.majorIncrement = increment;
+    super.minorIncrement = increment;
 }
 
 - (void)parseJson
@@ -75,6 +77,7 @@
     }
     else
     {
+        // Setting the value of the json data in the labels.
         _GasUsage.text = [NSString stringWithFormat:@"%@ m3", [energyData objectForKey:@"consgas"]];
     }
     
