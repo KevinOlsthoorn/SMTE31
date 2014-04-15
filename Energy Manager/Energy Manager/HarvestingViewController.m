@@ -75,6 +75,7 @@
     }
     else
     {
+        // Setting the value of the json data in the labels.
         _EnergyLifetime.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"energylifetime"], @" kWh"];
         _PowerPeakLifetime.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"powerpeak"], @" W"];
         _EnergyToday.text = [NSString stringWithFormat:@"%@%@", [energyData objectForKey:@"dailyenergy"], @" Wh"];

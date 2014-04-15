@@ -37,9 +37,11 @@
 
 - (void)parseJson
 {
+    // Initializing the json data variables.
     NSData *jsonDataConv = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://www.energy.xk140.nl/db_information.php?json=conv"]];
     NSData *jsonDataMeas = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://www.energy.xk140.nl/db_information.php?json=meas"]];
     
+    // Reading the json data and saving them in an NSMutableDictionary.
     NSError *errorConv;
     NSMutableDictionary *energyDataConv = [NSJSONSerialization
                                            JSONObjectWithData:jsonDataConv
@@ -66,6 +68,7 @@
     }
     else
     {
+        // Setting the value of the json data in the labels.
         _Panel1Power.text = [NSString stringWithFormat:@"%@%@", [energyDataConv objectForKey:@"power1"], @" Watt"];
         _Panel2Power.text = [NSString stringWithFormat:@"%@%@", [energyDataConv objectForKey:@"power2"], @" Watt"];
         _SolarPower.text = [NSString stringWithFormat:@"%@%@", [energyDataConv objectForKey:@"netpower"], @" Watt"];

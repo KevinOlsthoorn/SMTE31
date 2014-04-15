@@ -37,8 +37,10 @@
 
 - (void)parseJson
 {
+    // Initializing the json data variable.
     NSData *jsonData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:@"http://www.energy.xk140.nl/db_information.php?json=conv"]];
     
+    // Reading the json data and saving them in an NSMutableDictionary.
     NSError *error;
     NSMutableDictionary *energyData = [NSJSONSerialization
                                        JSONObjectWithData:jsonData
@@ -51,6 +53,7 @@
     }
     else
     {
+        // Setting the value of the json data in the labels.
         float investment = 3250.0f;
         NSString *investmentS = [NSString stringWithFormat:@"%.2f", investment];
         _Investment.text = [NSString stringWithFormat:@"€ %@", investmentS];
@@ -73,7 +76,6 @@
         NSDate *returnOffInvestment = [NSDate dateWithTimeInterval:intervalUntilReturn sinceDate:purchaseData];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         [formatter setDateStyle:NSDateFormatterLongStyle];
-        //[formatter setDateFormat:@"dd MM yyyy"];
         _ReturnOnInvestment.text = [NSString stringWithFormat:@"%@", [formatter stringFromDate:returnOffInvestment]];
         
         float emissionReduction = [[energyData objectForKey:@"energylifetime"] floatValue] * 0.7f;
