@@ -58,7 +58,7 @@
     if (super.yMaxValue != 0)
     {
         unsigned short increment = super.yMaxValue / 30; // Making sure we'll only see 30 y-points in our graph.
-        if (increment != 0) increment = (increment/10)*10; // Making sure the value is a round number.
+        if (increment >= 10) increment = (increment/10)*10; // Making sure the value is a round number.
         super.majorIncrement = increment;
         super.minorIncrement = increment;
     }
