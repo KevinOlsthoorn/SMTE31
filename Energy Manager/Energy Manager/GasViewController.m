@@ -55,10 +55,18 @@
 {
     super.y.title = @"Gas today (dm3)";
     super.yMaxValue = ([[super.graphDataDictionary valueForKeyPath:@"@max.consgas.floatValue"] floatValue] - [[[super.graphDataDictionary objectAtIndex:0] objectForKey:@"consgas"] floatValue])*1000.0f;
-    unsigned short increment = super.yMaxValue / 30; // Making sure we'll only see 30 y-points in our graph.
-    increment = (increment/10)*10; // Making sure the value is a round number.
-    super.majorIncrement = increment;
-    super.minorIncrement = increment;
+    if (super.yMaxValue != 0)
+    {
+        unsigned short increment = super.yMaxValue / 30; // Making sure we'll only see 30 y-points in our graph.
+        if (increment != 0) increment = (increment/10)*10; // Making sure the value is a round number.
+        super.majorIncrement = increment;
+        super.minorIncrement = increment;
+    }
+    else
+    {
+        super.majorIncrement = 2;
+        super.minorIncrement = 1;
+    }
 }
 
 - (void)parseJson
